@@ -96,7 +96,6 @@ comments:
     category: Announcements
     category_id: DIC_kwDOKrowhM4Ca11V
     mapping: # optional, default to 'pathname'
-    strict: 1
     input_position: top # optional, default to 'bottom'
     lang: # optional, default to the value of `site.lang`
     reactions_enabled: # optional, default to the value of `1`
