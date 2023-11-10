@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+{% include lang.html %}
+
+<article class="px-1">
+  {% if page.picture %}
+    <img class="preview-img" src="/{{ page.picture }}" alt="{{ page.title }}" />
+  {% endif %}
+  <h1 class="dynamic-title">
+    {{ page.title }}
+  </h1>
+  <div class="post-meta text-muted">
+    {% if page.bio %}
+	  <span>
+        <em>{{ page.bio }}</em>
+	  </span>
+	  <br>
+	{% endif %}
+	<span>
+	  {% assign number_of_posts = 0 %}
+      {% for post in site.posts %}
+	    {% if post.author %}
+          {% assign post_authors = post.author %}
+        {% elsif post.authors %}
+          {% assign post_authors = post.authors %}
+        {% endif %}
+        {% if post_authors contains page.username or page.username == post_authors %}
+          {% assign number_of_posts = number_of_posts | plus: 1 %}
+        {% endif %}
+      {% endfor %}
+      {% if number_of_posts == 0 %}<em>No</em> posts{% elsif number_of_posts == 1 %}<em>1</em> post{% else %}<em>{{ number_of_posts }}</em> posts{% endif %}
+	</span>
+  </div>
+  <div class="content">
+    <h2>Posts</h2>
+    {% for post in site.posts %}
+	  {% if post.author %}
+        {% assign post_authors = post.author %}
+      {% elsif post.authors %}
+        {% assign post_authors = post.authors %}
+      {% endif %}
+	  {% if post_authors contains page.username or page.username == post_authors %}
+		<a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+	  {% endif %}
+    {% endfor %}
+  </div>
+</article>

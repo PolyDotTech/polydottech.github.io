@@ -134,6 +134,9 @@ collections:
   tabs:
     output: true
     sort_by: order
+  authors: # I added this to make the authors page -gtant
+    output: true
+    permalink: author/:title/
 
 defaults:
   - scope:
@@ -146,6 +149,11 @@ defaults:
       # DO NOT modify the following parameter unless you are confident enough
       # to update the code of all other post links in this project.
       permalink: /posts/:title/
+  - scope: # section added to make authors page -gtant
+      path: ""
+      type: authors
+    values:
+      layout: author
   - scope:
       path: _drafts
     values:

@@ -60,10 +60,16 @@ tail_includes:
 
           <em>
             {% if authors %}
-              {% for author in authors %}
-                <a href="{{ site.data.authors[author].url }}">{{ site.data.authors[author].name }}</a>
-                {% unless forloop.last %}{{ '</em>, <em>' }}{% endunless %}
-              {% endfor %}
+              {% assign authordata = '' | split:'@' %}
+                {% for author in site.authors %}
+                  {% if authors contains author.username %}
+                    {% capture data %}
+                      <a href="{{ site.url }}{{ site.baseurl }}/author/{{ author.username }}">{{ author.title }}</a>
+                    {% endcapture %}
+                    {% assign authordata = authordata | push: data %}
+                  {% endif %}
+                {% endfor %}
+                {{ authordata | array_to_sentence_string }}
             {% else %}
               <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>
             {% endif %}
