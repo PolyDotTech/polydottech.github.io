@@ -24,7 +24,7 @@ description: >- # used by seo meta and the atom feed
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://club.hackpoly.tech"
 
 github:
   username: polydottech # change to your github username
@@ -75,7 +75,7 @@ theme_mode: dark # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: "assets/img/icon.png"
 
 # boolean type, the global switch for TOC in posts.
 toc: true
