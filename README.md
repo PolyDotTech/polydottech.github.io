@@ -6,7 +6,7 @@ Poly.Tech's club website
 
 *This section is more for (future) maintainers, if you're an author just contact the maintainer (currently Gavin) to help you with this.*
 
-Make sure you have an entry in _data/authors.yml. Then just add a file to the _posts folder with the filename YYYY-MM-DD-Post-Title.md, and make sure it has this front matter:
+Make sure you have an entry in _data/authors.yml, as well as a page in _authors. Then just add a file to the _posts folder with the filename YYYY-MM-DD-Post-Title.md, and make sure it has this front matter:
 
 ```md
 ---
