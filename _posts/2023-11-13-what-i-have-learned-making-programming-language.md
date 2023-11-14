@@ -128,7 +128,7 @@ Now a syntax tree might sound fancy, but it really isn't. To make it, just make 
 > | Ternary of expr * expr * expr
 > ```
 > In an object-oriented language, you would likely make an expression interface, and then make classes for each kind of expression that implement that interface.
-{: prompt-tip }
+{: .prompt-tip }
 
 ### What happens after?
 
