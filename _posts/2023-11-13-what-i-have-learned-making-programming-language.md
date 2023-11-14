@@ -1,7 +1,7 @@
 ---
-title: Blog: What I have learned from making a programming language
+title: "Blog: What I have learned from making a programming language"
 author: gtant
-date: 2021-11-13 10:40
+date: 2023-11-13 21:55
 categories: [Blog]
 ---
 
